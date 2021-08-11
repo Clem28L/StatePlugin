@@ -1,0 +1,13 @@
+name: StatePlugin
+version: 1.0
+author: Clem28L
+main: fr.clem.stateplugin.StatePlugin
+commands: 
+  etat creer:
+    description: Ceci est la commande pour crée un etat 
+    permission: etat.creer
+  etat rejoindre: 
+    description: ceci est un broadcast custom 
+    permission: etat.rejoindre
+  
+    
