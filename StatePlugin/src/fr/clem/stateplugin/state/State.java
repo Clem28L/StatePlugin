@@ -4,16 +4,19 @@ import java.util.ArrayList;
 
 import org.bukkit.entity.Player;
 
+
+
 public class State {
 	
 	private String name_of_state ;
-	private String manager ;
-	private ArrayList member = new ArrayList();
+	private Player manager ;
+	private ArrayList<Player> members = new ArrayList<>();
 	
-	public State(String name_of_state, Player manager, Player member) {
+	public State(String name_of_state, Player manager) {
 		// TODO Auto-generated constructor stub
-		this.name_of_state = name_of_state;
-		this.manager = manager; 
+		this.setName_of_state(name_of_state);
+		this.setManager(manager); 
+		this.members.add(manager);
 		
 	}
 
@@ -25,20 +28,14 @@ public class State {
 		this.name_of_state = name_of_state;
 	}
 
-	public String getManager() {
+	public Player getManager() {
 		return manager;
 	}
 
-	public void setManager(String manager) {
+	public void setManager(Player manager) {
 		this.manager = manager;
 	}
 
-	public ArrayList getMember() {
-		return member;
-	}
 
-	public void setMember(ArrayList member) {
-		this.member = member;
-	}
 	
 }
